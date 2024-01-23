@@ -3,25 +3,51 @@
   margin: 0;
   padding: 0;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #333;
+  background-color: #edebeb;
   
-
-  /*Navigation*/
-
-  nav {
-    height: 60px;
-    line-height: 60px;
-    background-color: #ddd;
-    text-align: center;
-
-    .wrapper {
+  .wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
   }
+  .hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    h1 {
+      margin-bottom: 5px;
+      text-shadow: 3px 3px 5px #000;
+      color: #ddd;
+    }
+    span {
+      text-transform: uppercase;
+      color: #09f;
+    }
+  }
+  /*Navigation*/
+
+  nav {
+    position: sticky;
+    height: 60px;
+    top: 0;
+    line-height: 60px;
+    background-color: #ddd;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
 
     .burger-icon {
       display: block;
@@ -41,45 +67,80 @@ body {
       display: none;
     }
   }
-/*Header*/
+  /*Header*/
 
-.header{
-  position: relative;
-  background-image: url(../img/small_hero.jpg);
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  .hero-bg{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.6)
+  .header {
+    position: relative;
+    background-image: url(../img/small_hero.jpg);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
   }
-  .hero-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-    h1{
-      margin-bottom: 5px;
-      text-shadow: 3px 3px 5px #000;
-      color: #ddd;
+
+  /*Section About-us*/
+  main {
+    margin: 50px 0;
+    .section-title {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      text-align: center;
     }
-      span{
-        text-transform: uppercase;
+    .about-us-info {
+      margin-bottom: 10px;
+      padding: 0 20px;
+    }
+    /*Products*/
+    .products {
+      margin: 50px auto;
+    }
+    .productwrap {
+      position: relative;
+      height: 300px;
+      background-size: cover;
+    }
+    .product h3{
+      transition: color .5s;
+      transition: scale .3s;
+    }
+    .product:hover{
+      h3{
+        scale: 1.4;
         color: #09f;
-
       }
+    }
+    .first-product {
+      background-image: url(../img/children-593313_640.jpg);
+    }
+    h3 {
+      text-transform: uppercase;
+    }
+    .second-product {
+      background-image: url(..//img/keyboard-70506_640.jpg);
+    }
+    .third-product {
+      background-image: url(../img/woman-1851464_640.jpg);
+    }
+    .fourth-product {
+      background-image: url(../img/laptop-1483974_640.jpg);
+    }
+  }
+  .contact{
+    text-align: center;
+    line-height: 30px;
+    h3{
+      margin: 20px 0 5px;
+      text-transform: uppercase;
+    }
+  }
+  footer{
+    padding: 30px 10px;
+    text-align: center;
+  }
+  section{
+    scroll-margin-top: 80px;
+    
   }
 }
-  
-}
-
-
-
-
-
 
 @media (min-width: 768px) {
   .wrapper {
@@ -101,26 +162,40 @@ body {
       color: rgb(7, 140, 177);
     }
   }
-  body .header{
-  background-image: url(../img/big_hero.jpg);
-  height: 400px;
-  h1{
+  body .header {
+    background-image: url(../img/big_hero.jpg);
+    height: 400px;
+    h1 {
       font-size: 36px;
     }
-    p{
+    p {
       font-size: 18px;
     }
   }
+  main h3{
+    font-size: 24px;
+  }
+
   
 }
+@media (min-width: 992px) {
+  main .product{
+    display: inline-block;
+    width: 50%;
+  
+  }
+  main .pruducts-box{
+    font-size: 0;
+  }
+  }
+
 @media (min-width: 1200px) {
-  body .header{
-  h1{
+  body .header {
+    h1 {
       font-size: 42px;
     }
-    p{
+    p {
       font-size: 20px;
     }
   }
-
 }

@@ -4,22 +4,53 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #333;
+  background-color: #edebeb;
   /*Navigation*/
   /*Header*/
+  /*Section About-us*/
 }
-body nav {
-  height: 60px;
-  line-height: 60px;
-  background-color: #ddd;
-  text-align: center;
-}
-body nav .wrapper {
+body .wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+}
+body .hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+body .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+body .hero-text h1 {
+  margin-bottom: 5px;
+  text-shadow: 3px 3px 5px #000;
+  color: #ddd;
+}
+body .hero-text span {
+  text-transform: uppercase;
+  color: #09f;
+}
+body nav {
+  position: sticky;
+  height: 60px;
+  top: 0;
+  line-height: 60px;
+  background-color: #ddd;
+  text-align: center;
+  z-index: 2;
+  width: 100%;
 }
 body nav .burger-icon {
   display: block;
@@ -45,27 +76,64 @@ body .header {
   background-size: cover;
   background-position: center;
 }
-body .header .hero-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+body main {
+  margin: 50px 0;
+  /*Products*/
 }
-body .header .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-body .header .hero-text h1 {
-  margin-bottom: 5px;
-  text-shadow: 3px 3px 5px #000;
-  color: #ddd;
-}
-body .header .hero-text span {
+body main .section-title {
+  margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
+}
+body main .about-us-info {
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+body main .products {
+  margin: 50px auto;
+}
+body main .productwrap {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+}
+body main .product h3 {
+  transition: color 0.5s;
+  transition: scale 0.3s;
+}
+body main .product:hover h3 {
+  scale: 1.4;
   color: #09f;
+}
+body main .first-product {
+  background-image: url(../img/children-593313_640.jpg);
+}
+body main h3 {
+  text-transform: uppercase;
+}
+body main .second-product {
+  background-image: url(..//img/keyboard-70506_640.jpg);
+}
+body main .third-product {
+  background-image: url(../img/woman-1851464_640.jpg);
+}
+body main .fourth-product {
+  background-image: url(../img/laptop-1483974_640.jpg);
+}
+body .contact {
+  text-align: center;
+  line-height: 30px;
+}
+body .contact h3 {
+  margin: 20px 0 5px;
+  text-transform: uppercase;
+}
+body footer {
+  padding: 30px 10px;
+  text-align: center;
+}
+body section {
+  scroll-margin-top: 80px;
 }
 
 @media (min-width: 768px) {
@@ -95,6 +163,18 @@ body .header .hero-text span {
   }
   body .header p {
     font-size: 18px;
+  }
+  main h3 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  main .product {
+    display: inline-block;
+    width: 50%;
+  }
+  main .pruducts-box {
+    font-size: 0;
   }
 }
 @media (min-width: 1200px) {
